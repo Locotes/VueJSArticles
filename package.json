@@ -1,0 +1,47 @@
+{
+  "name": "drt",
+  "version": "0.0.1",
+  "description": "DRT vertrekpunt",
+  "license": "UNLICENSED",
+  "repository": {},
+  "engines": {
+    "npm": ">=3"
+  },
+  "dependencies": {
+    "axios": "^0.15.3",
+    "babel-polyfill": "^6.23.0",
+    "lodash": "^4.17.4",
+    "moment": "^2.17.1",
+    "q": "^1.5.0",
+    "vue": "^2.1.8",
+    "vue-clickaway": "^2.1.0",
+    "vue-events": "^3.0.0",
+    "vue-router": "^2.4.0",
+    "vuex": "^2.2.1",
+    "vuex-persistedstate": "^1.3.0"
+  },
+  "scripts": {
+    "dev": "webpack --watch --config webpack.config.js --display-error-details"
+  },
+  "devDependencies": {
+    "autoprefixer-loader": "^3.2.0",
+    "babel-core": "^6.23.1",
+    "babel-loader": "^6.3.2",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-stage-2": "^6.22.0",
+    "babel-runtime": "^6.23.0",
+    "css-loader": "^0.26.1",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.9.0",
+    "install": "^0.8.7",
+    "node-sass": "^4.5.0",
+    "sass-loader": "^4.1.1",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "vue-loader": "^10.3.0",
+    "vue-style-loader": "^1.0.0",
+    "vue-template-compiler": "^2.1.0",
+    "webpack": "^1.14.0"
+  }
+}
