@@ -16017,7 +16017,7 @@
 	    }, {
 	        key: 'getNewsItems',
 	        value: function getNewsItems() {
-	            return this.fetchData('/data/items.json');
+	            return this.fetchData('./data/items.json');
 	        }
 	    }, {
 	        key: 'getNewsItem',
