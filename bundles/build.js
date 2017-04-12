@@ -15649,6 +15649,10 @@
 	//
 	//
 	//
+	//
+	//
+	//
+	//
 
 	var apiService = new _ApiService2.default();
 	var itemsToLoad = 5;
@@ -15746,6 +15750,10 @@
 	//
 	//
 	//
+	//
+	//
+	//
+	//
 
 	exports.default = {
 	    name: 'newsItem',
@@ -15758,27 +15766,33 @@
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
 	  return _c('div', {
-	    staticClass: "news-item"
+	    staticClass: "media news-item"
+	  }, [_c('figure', {
+	    staticClass: "media-left"
 	  }, [_c('router-link', {
-	    staticClass: "news-item-link",
 	    attrs: {
 	      "to": ("/article/" + (_vm.item.url))
 	    }
-	  }, [_c('figure', {
-	    staticClass: "news-item-figure"
 	  }, [_c('img', {
-	    staticClass: "news-item-img",
+	    staticClass: "media-object",
 	    attrs: {
 	      "src": _vm.item.image,
-	      "alt": ""
+	      "alt": "",
+	      "width": "100"
 	    }
-	  })]), _vm._v(" "), _c('article', {
-	    staticClass: "news-item-content"
-	  }, [_c('h5', {
-	    staticClass: "h5 news-item-heading"
-	  }, [_vm._v(_vm._s(_vm.item.title))]), _vm._v(" "), _c('p', {
-	    staticClass: "news-item-paragraph"
-	  }, [_vm._v(_vm._s(_vm.item.description))])])])], 1)
+	  })])], 1), _vm._v(" "), _c('div', {
+	    staticClass: "media-body"
+	  }, [_c('h4', {
+	    staticClass: "media-heading"
+	  }, [_c('router-link', {
+	    attrs: {
+	      "to": ("/article/" + (_vm.item.url))
+	    }
+	  }, [_vm._v(_vm._s(_vm.item.title))])], 1), _vm._v(" "), _c('p', [_vm._v("\n            " + _vm._s(_vm.item.intro) + " "), _c('router-link', {
+	    attrs: {
+	      "to": ("/article/" + (_vm.item.url))
+	    }
+	  }, [_vm._v("Read more →")])], 1)])])
 	},staticRenderFns: []}
 	module.exports.render._withStripped = true
 	if (false) {
@@ -15799,7 +15813,7 @@
 	    staticClass: "news-items"
 	  }, [_c('transition-group', {
 	    attrs: {
-	      "name": "news-items-complete",
+	      "name": "fade-in",
 	      "tag": "div"
 	    }
 	  }, _vm._l((_vm.newsItems), function(newsItem) {
@@ -15809,20 +15823,22 @@
 	        "item": newsItem
 	      }
 	    })
-	  })), _vm._v(" "), _c('button', {
+	  })), _vm._v(" "), _c('div', {
+	    staticClass: "text-center"
+	  }, [_c('br'), _vm._v(" "), _c('button', {
 	    directives: [{
 	      name: "show",
 	      rawName: "v-show",
 	      value: (_vm.moreItemsToLoad()),
 	      expression: "moreItemsToLoad()"
 	    }],
-	    staticClass: "btn",
+	    staticClass: "btn btn-lg btn-primary",
 	    on: {
 	      "click": function($event) {
 	        _vm.loadMoreItems()
 	      }
 	    }
-	  }, [_vm._v("Load more")])], 1)])
+	  }, [_vm._v("Load more")])])], 1)])
 	},staticRenderFns: []}
 	module.exports.render._withStripped = true
 	if (false) {
@@ -15895,7 +15911,6 @@
 	//
 	//
 	//
-	//
 
 	exports.default = {
 	    name: 'newsArticle',
@@ -15929,7 +15944,7 @@
 	    attrs: {
 	      "to": "/"
 	    }
-	  }, [_vm._v("Back to home")]), _vm._v(" "), _c('article', {
+	  }, [_vm._v("← Back to home")]), _vm._v(" "), _c('article', {
 	    staticClass: "article"
 	  }, [_c('figure', {
 	    staticClass: "article-figure"
@@ -15937,7 +15952,8 @@
 	    staticClass: "article-img",
 	    attrs: {
 	      "src": _vm.article.image,
-	      "alt": ""
+	      "alt": "",
+	      "width": "200"
 	    }
 	  })]), _vm._v(" "), _c('h1', {
 	    staticClass: "h1 article-heading"

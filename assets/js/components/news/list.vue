@@ -1,10 +1,14 @@
 <template>
     <div class="container">
         <div class="news-items">
-            <transition-group name="news-items-complete" tag="div">
+            <transition-group name="fade-in" tag="div">
                 <news-item v-for="newsItem in newsItems" v-bind:key="newsItem.url" v-bind:item="newsItem"></news-item>
             </transition-group>
-            <button class="btn" v-on:click="loadMoreItems()" v-show="moreItemsToLoad()">Load more</button>
+            
+            <div class="text-center">
+                <br />
+                <button class="btn btn-lg btn-primary" v-on:click="loadMoreItems()" v-show="moreItemsToLoad()">Load more</button>
+            </div>
         </div>
     </div>
 </template>
