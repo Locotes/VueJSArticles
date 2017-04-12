@@ -1,7 +1,7 @@
 {
-  "name": "drt",
-  "version": "0.0.1",
-  "description": "DRT vertrekpunt",
+  "name": "vuejsarticles",
+  "version": "1.0.0",
+  "description": "VueJS articles",
   "license": "UNLICENSED",
   "repository": {},
   "engines": {

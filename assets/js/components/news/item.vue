@@ -1,6 +1,6 @@
 <template>
     <div class="news-item">
-        <router-link to="item.url" class="news-item-link">
+        <router-link :to="`/article/${item.url}`" class="news-item-link">
             <figure class="news-item-figure">
                 <img class="news-item-img" v-bind:src="item.image" alt="">
             </figure>

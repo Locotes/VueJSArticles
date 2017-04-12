@@ -18,10 +18,13 @@ img {
     max-width: 100%;
 }
 
-.news-items {
+.container {
     padding: 10px;
     max-width: 600px;
-    margin:0 auto;
+    margin: 0 auto;
+}
+
+.news-items {
     text-align: center;
 
     &-complete {
@@ -35,7 +38,7 @@ img {
     margin-bottom: 20px;
     background-color: #DDD;
     text-align: left;
-    transition: all 1s;
+    transition: opacity .5s ease;
 
     &-link {
         display: flex;
@@ -76,5 +79,35 @@ img {
 
     &:hover {
         background-color: #999;
+    }
+}
+
+.article {
+    padding-top: 20px;
+
+    &-figure {
+        width: 250px;
+        margin:0 20px 20px 0;
+        float: left;
+    }
+
+    &-heading {
+        margin-top: 0;
+    }
+}
+
+.page-slide {
+    &-enter-active, &-leave-active {
+        transition: opacity .2s ease, transform .2s ease;
+    }
+
+    &-leave-to {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    &-enter {
+        opacity: 0;
+        transform: translateX(50px);
     }
 }

@@ -5,7 +5,9 @@
     </head>
     <body>
         <div id="app">
-            <news-list></news-list>
+            <transition name="page-slide" mode="out-in">
+                <router-view></router-view>
+            </transition>
         </div>
 
         <script src="bundles/build.js"></script>
