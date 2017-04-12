@@ -11,4 +11,4 @@ In order to run this yourself: (make sure you have browser-sync installed global
 
 ![no demo?](https://img.memesuper.com/ebf36a91dbf393569462eb6dca9db00f_skeptical-baby-meme-no-demo-meme-demo_253-260.jpeg)
 
-Yes demo! https://locotes.github.io/VueJSArticles/
+Yes demo! <a href="https://locotes.github.io/VueJSArticles/" target="_blank">https://locotes.github.io/VueJSArticles/</a>
