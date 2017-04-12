@@ -23,7 +23,7 @@ export default class ApiService {
     }
     
     getNewsItems() {
-        return this.fetchData('../data/items.json');
+        return this.fetchData('data/items.json');
     }
 
     getNewsItem(url) {
