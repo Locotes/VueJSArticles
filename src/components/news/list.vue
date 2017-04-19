@@ -54,3 +54,19 @@
         }
     }
 </script>
+
+<style lang="scss">
+.news-items {
+    padding: 10px 0;
+}
+
+.news-item {
+    padding: 10px;
+    background-color: #EEE;
+    transition: opacity .5s ease;
+
+    .media-body {
+        vertical-align: middle;
+    }
+}
+</style>

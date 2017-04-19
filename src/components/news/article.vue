@@ -27,11 +27,20 @@
         created: function() { this.getArticle() },
         methods: {
             getArticle() {
-                var vm = this; 
+                var vm = this
                 apiService.getNewsItem(this.url).then(function(item) {
-                    vm.article = item;
+                    vm.article = item
                 });
             }
         }
     }
 </script>
+
+<style lang="scss">
+.article {
+    &-figure {
+        float: left;
+        margin:0 20px 20px 0;
+    }
+}
+</style>

@@ -1,0 +1,8 @@
+/* Only non-component based SCSS files should be placed here. 
+ * Static vendor CSS should go into the /static folder. 
+ * This is recommended by Vue, because it avoids extra build time and also is better for browser caching
+ */
+
+/* Components */
+@import    
+        'components/transitions';

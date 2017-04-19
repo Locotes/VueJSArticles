@@ -2,25 +2,23 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="bundles/main.css">
+	<link rel="stylesheet" href="static/css/bootstrap/bootstrap.css">
 </head>
 
 <body>
-    <nav class="navbar navbar-default navbar-static-top">
-        <div class="container">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="#">VueJS Adventure</a>
-            </div>
-        </div>
-    </nav>
+	<nav class="navbar navbar-default navbar-static-top">
+		<div class="container">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#">VueJS Adventure</a>
+			</div>
+		</div>
+	</nav>
 
-    <div id="app">
-        <transition name="page-slide" mode="out-in">
-            <router-view></router-view>
-        </transition>
-    </div>
-
-    <script src="bundles/build.js"></script>
+	<div id="app">
+		<transition name="page-slide" mode="out-in">
+			<router-view></router-view>
+		</transition>
+	</div>
 </body>
 
 </html>
