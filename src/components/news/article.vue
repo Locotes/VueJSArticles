@@ -12,7 +12,7 @@
 </template>
 
 <script>
-    import ApiService from '../../services/api-service';
+    import ApiService from 'Services/api-service';
 
     const apiService = new ApiService();
 
