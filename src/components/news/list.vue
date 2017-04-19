@@ -15,9 +15,6 @@
 
 <script>
     import newsItem from './item';
-    import ApiService from '../../services/ApiService';
-
-    const apiService = new ApiService();
     const itemsToLoad = 5;
 
     export default {
@@ -27,26 +24,25 @@
         },
         data: () => {
             return {
-                newsItems: [],
-                totalItems: 0,
                 totalShownItems: 0                
             }
         },
-        created: function() { this.getItems(itemsToLoad, 0) },
-        methods: {
-            getItems(total, start) {
-                var vm = this;
+        created() { 
+            this.$store.dispatch('addNewsItems', { from: 0, max: itemsToLoad }) 
+        },
+        computed: {
+            newsItems() {
+                this.totalShownItems = this.$store.state.newsItems.length;
 
-                apiService.getNewsItems().then((data) => {
-                    vm.newsItems = vm.newsItems.concat(data.slice(start, vm.totalShownItems + total));
-                    vm.totalShownItems = vm.newsItems.length;
-                    vm.totalItems = data.length;
-                });
+                return this.$store.state.newsItems;
             },
+            totalItems() {
+                return this.$store.state.totalItems;
+            }
+        },
+        methods: {
             loadMoreItems() {
-                if (this.moreItemsToLoad()) {
-                    this.getItems(itemsToLoad, this.totalShownItems);
-                }
+                this.$store.dispatch('addNewsItems', { from: this.totalShownItems, max: itemsToLoad }) 
             },
             moreItemsToLoad() {
                 return this.totalShownItems < this.totalItems;

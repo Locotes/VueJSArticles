@@ -30,15 +30,11 @@ var app = new Vue({
 	store,
 	router,
 	data: {},
-	computed: {
-
-	},
+	computed: {},
 	components: {
 		'newsList': newsList,
 		'newsItem': newsItem,
 		'newsArticle': newsArticle
 	},
-	methods: {
-
-	}
+	methods: {}
 });

@@ -12,25 +12,24 @@
 </template>
 
 <script>
-    import ApiService from '../../services/ApiService';
+    import ApiService from '../../services/api-service';
 
     const apiService = new ApiService();
 
     export default {
         name: 'newsArticle',
         props: ['url'],
-        data: () => {
+        data() {
             return {
                 article: {}
             }
         },
-        created: function() { this.getArticle() },
+        created() { this.getArticle() },
         methods: {
             getArticle() {
-                var vm = this
-                apiService.getNewsItem(this.url).then(function(item) {
-                    vm.article = item
-                });
+                apiService.getNewsItem(this.url).then((item) => {
+                    this.article = item;
+                })
             }
         }
     }

@@ -1,11 +1,8 @@
 export const mutations = {
-	setCode(state, input) {
-		state.code = input
+	addNewsItems(state, newsItems) {
+		state.newsItems = state.newsItems.concat(newsItems);
 	},
-	setItems(state, input) {
-		state.items = input
-	},
-	setBorderRadius(state, input) {
-		state.borderRadius = input
-	}
+    setTotalItems(state, totalItems) {
+        state.totalItems = totalItems;
+    }
 }
