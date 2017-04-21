@@ -4,8 +4,9 @@ Follow my VueJS adventure. Here you have my test project using Webpack, ES6, Vue
 
 In order to run this yourself:
 
-1. npm install
-2. npm run dev
+1. npm install json-server -g (Only if you haven't got the package installed globally)
+2. npm install
+3. npm run dev
 
 ## Update
 - (2017-04-19) Implement Vuex
@@ -14,3 +15,4 @@ In order to run this yourself:
 ## Todo: 
 * ~~Take a look at vue-cli to start the project with~~
 * ~~Implement Vuex~~
+* Implement json-server

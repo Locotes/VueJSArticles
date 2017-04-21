@@ -1,0 +1,251 @@
+{
+	"articles": [{
+    "id": 1,
+		"title": "F8: Facebook doubles down on the enterprise with 4 key business services",
+		"pubDate": "2017-04-21 04:32:40",
+		"link": "http:\/\/www.techrepublic.com\/article\/f8-facebook-doubles-down-on-the-enterprise-with-4-key-business-services\/#ftag=RSS56d97e7",
+		"guid": "http:\/\/www.techrepublic.com\/article\/f8-facebook-doubles-down-on-the-enterprise-with-4-key-business-services\/#ftag=RSS56d97e7",
+		"author": "Jason Hiner",
+		"thumbnail": "",
+		"description": "While Facebook still often gets characterized for cat photos and fake news, the company is making big moves in the back office. At F8 2017, these four business tools quietly stole the show.",
+		"content": "While Facebook still often gets characterized for cat photos and fake news, the company is making big moves in the back office. At F8 2017, these four business tools quietly stole the show.",
+		"enclosure": {
+			"link": "https:\/\/tr2.cbsistatic.com\/hub\/i\/2017\/04\/21\/66cf2d5e-5b6f-4b9e-b023-b25135b31fe4\/b58e7c41a37cd188a39aba3cc3a85233\/f8-2017-sign.jpg",
+			"type": "image\/jpeg",
+			"length": 109010
+		},
+		"categories": ["Enterprise Software"]
+	}, {
+    "id": 2,
+		"title": "How to harness OneDrive to keep your Power BI dashboard fresh",
+		"pubDate": "2017-04-20 20:00:54",
+		"link": "http:\/\/www.techrepublic.com\/blog\/microsoft-office\/how-to-harness-onedrive-to-keep-your-power-bi-dashboard-fresh\/#ftag=RSS56d97e7",
+		"guid": "http:\/\/www.techrepublic.com\/blog\/microsoft-office\/how-to-harness-onedrive-to-keep-your-power-bi-dashboard-fresh\/#ftag=RSS56d97e7",
+		"author": "Mark Kaelin",
+		"thumbnail": "",
+		"description": "By connecting to a dataset located on OneDrive, you can keep your Power BI reports up to date automatically. Here is how to set it up.",
+		"content": "By connecting to a dataset located on OneDrive, you can keep your Power BI reports up to date automatically. Here is how to set it up.",
+		"enclosure": {
+			"link": "https:\/\/tr2.cbsistatic.com\/hub\/i\/2017\/04\/20\/05e109e8-bf22-408c-bdcc-91873a741164\/c24067d3e0de302a563014c1fcaa9b3a\/peshkovistock-501389450.jpg",
+			"type": "image\/jpeg",
+			"length": 283153
+		},
+		"categories": ["Software"]
+	}, {
+    "id": 3,
+		"title": "Amazon Alexa adds support for G Suite calendar integration",
+		"pubDate": "2017-04-20 19:20:18",
+		"link": "http:\/\/www.techrepublic.com\/article\/amazon-alexa-adds-support-for-g-suite-calendar-integration\/#ftag=RSS56d97e7",
+		"guid": "http:\/\/www.techrepublic.com\/article\/amazon-alexa-adds-support-for-g-suite-calendar-integration\/#ftag=RSS56d97e7",
+		"author": "Conner Forrest",
+		"thumbnail": "",
+		"description": "Amazon's voice-powered assistant, Alexa, will now be able to book calendar appointments and check dates for Google's G Suite business customers.",
+		"content": "Amazon's voice-powered assistant, Alexa, will now be able to book calendar appointments and check dates for Google's G Suite business customers.",
+		"enclosure": {
+			"link": "https:\/\/tr2.cbsistatic.com\/hub\/i\/2017\/04\/20\/868642bb-dadd-41b9-aecc-de8c8827ce53\/c94ff258bf4febf47ff8c96a88feb32e\/gcalendar.jpg",
+			"type": "image\/jpeg",
+			"length": 95897
+		},
+		"categories": ["Innovation"]
+	}, {
+    "id": 4,
+		"title": "Big data takes a big leap in Kansas City with smart sensor info on parking and traffic",
+		"pubDate": "2017-04-20 17:58:00",
+		"link": "http:\/\/www.techrepublic.com\/article\/big-data-takes-a-big-leap-in-kansas-city-with-smart-sensor-info-on-parking-and-traffic\/#ftag=RSS56d97e7",
+		"guid": "http:\/\/www.techrepublic.com\/article\/big-data-takes-a-big-leap-in-kansas-city-with-smart-sensor-info-on-parking-and-traffic\/#ftag=RSS56d97e7",
+		"author": "Teena Maddox",
+		"thumbnail": "",
+		"description": "If you want to see what traffic is like in Kansas City, or where there's an available parking spot, a new online site shows real time data from city streets.",
+		"content": "If you want to see what traffic is like in Kansas City, or where there's an available parking spot, a new online site shows real time data from city streets.",
+		"enclosure": {
+			"link": "https:\/\/tr1.cbsistatic.com\/hub\/i\/2017\/04\/20\/9d49abb1-75fb-400a-a390-359b0dfb5ba8\/47bb4a413dcdc30f44c20c33634bcefc\/kansas-city-data.png",
+			"type": "image\/png",
+			"length": 649731
+		},
+		"categories": ["Innovation"]
+	}, {
+    "id": 5,
+		"title": "7 tips for effectively rolling out emergency patches",
+		"pubDate": "2017-04-20 17:46:06",
+		"link": "http:\/\/www.techrepublic.com\/article\/7-tips-for-effectively-rolling-out-emergency-patches\/#ftag=RSS56d97e7",
+		"guid": "http:\/\/www.techrepublic.com\/article\/7-tips-for-effectively-rolling-out-emergency-patches\/#ftag=RSS56d97e7",
+		"author": "Scott Matteson",
+		"thumbnail": "",
+		"description": "Emergency patches can be stressful and time consuming to deploy. Learn some strategies for doing so in the most effective manner.",
+		"content": "Emergency patches can be stressful and time consuming to deploy. Learn some strategies for doing so in the most effective manner.",
+		"enclosure": {
+			"link": "https:\/\/tr2.cbsistatic.com\/hub\/i\/2017\/04\/20\/b01b2761-ae6f-48cc-8e3d-10a014f800d7\/8f97f65072cb6e7c50708a6237e67a48\/istock-110931515.jpg",
+			"type": "image\/jpeg",
+			"length": 7796114
+		},
+		"categories": ["Security"]
+	}, {
+    "id": 6,
+		"title": "Amazon visual search integration will make it even easier to shop on the Samsung Galaxy S8",
+		"pubDate": "2017-04-20 17:44:24",
+		"link": "http:\/\/www.techrepublic.com\/article\/amazon-visual-search-integration-will-make-it-even-easier-to-shop-on-the-samsung-galaxy-s8\/#ftag=RSS56d97e7",
+		"guid": "http:\/\/www.techrepublic.com\/article\/amazon-visual-search-integration-will-make-it-even-easier-to-shop-on-the-samsung-galaxy-s8\/#ftag=RSS56d97e7",
+		"author": "Conner Forrest",
+		"thumbnail": "",
+		"description": "The Samsung Galaxy S8 smartphone will have Amazon's visual search capabilities built in, allowing users to search for items through the phone's camera app.",
+		"content": "The Samsung Galaxy S8 smartphone will have Amazon's visual search capabilities built in, allowing users to search for items through the phone's camera app.",
+		"enclosure": {
+			"link": "https:\/\/tr1.cbsistatic.com\/hub\/i\/2017\/04\/20\/b88a83d3-d011-44a8-ab19-db12ec37e493\/97d59faf486ded932f62b60fa4e580a6\/samsungs8th.jpg",
+			"type": "image\/jpeg",
+			"length": 69268
+		},
+		"categories": ["Mobility"]
+	}, {
+    "id": 7,
+		"title": "How to take advantage of the new Set These Tabs Aside feature in Microsoft Edge",
+		"pubDate": "2017-04-20 17:36:00",
+		"link": "http:\/\/www.techrepublic.com\/article\/how-to-take-advantage-of-the-new-set-these-tabs-aside-feature-in-microsoft-edge\/#ftag=RSS56d97e7",
+		"guid": "http:\/\/www.techrepublic.com\/article\/how-to-take-advantage-of-the-new-set-these-tabs-aside-feature-in-microsoft-edge\/#ftag=RSS56d97e7",
+		"author": "Greg Shultz",
+		"thumbnail": "",
+		"description": "Avoid tab overload and search the web more efficiently using Microsoft Edge in the Windows 10 Creators Update.",
+		"content": "Avoid tab overload and search the web more efficiently using Microsoft Edge in the Windows 10 Creators Update.",
+		"enclosure": {
+			"link": "https:\/\/tr2.cbsistatic.com\/hub\/i\/2017\/04\/20\/a4690732-137c-4943-9b0d-112fa28095c9\/9e564aec7df4738591c6d7118b6daf70\/kvkirillovistock-527219364.jpg",
+			"type": "image\/jpeg",
+			"length": 143069
+		},
+		"categories": ["Software"]
+	}, {
+    "id": 8,
+		"title": "How to run NGINX as a Docker container",
+		"pubDate": "2017-04-20 17:08:00",
+		"link": "http:\/\/www.techrepublic.com\/article\/how-to-run-nginx-as-a-docker-container\/#ftag=RSS56d97e7",
+		"guid": "http:\/\/www.techrepublic.com\/article\/how-to-run-nginx-as-a-docker-container\/#ftag=RSS56d97e7",
+		"author": "Jack Wallen",
+		"thumbnail": "",
+		"description": "If you're looking to run NGINX as a Docker container, and expose it to your local network, here's how to do it.",
+		"content": "If you're looking to run NGINX as a Docker container, and expose it to your local network, here's how to do it.",
+		"enclosure": {
+			"link": "https:\/\/tr3.cbsistatic.com\/hub\/i\/2017\/04\/20\/d302160d-b3f5-4406-8294-1ff85cf4be47\/fe94093a3e82587082c7b911495c263d\/dockerwhalehero.jpg",
+			"type": "image\/jpeg",
+			"length": 40595
+		},
+		"categories": ["Networking"]
+	}, {
+    "id": 9,
+		"title": "5 mobile security precautions nobody should ignore",
+		"pubDate": "2017-04-20 16:51:57",
+		"link": "http:\/\/www.techrepublic.com\/article\/5-mobile-security-precautions-nobody-should-ignore\/#ftag=RSS56d97e7",
+		"guid": "http:\/\/www.techrepublic.com\/article\/5-mobile-security-precautions-nobody-should-ignore\/#ftag=RSS56d97e7",
+		"author": "Jack Wallen",
+		"thumbnail": "",
+		"description": "Mobile security should be on your list of things to take seriously. Jack Wallen tells you why and gives you some tips on making it happen.",
+		"content": "Mobile security should be on your list of things to take seriously. Jack Wallen tells you why and gives you some tips on making it happen.",
+		"enclosure": {
+			"link": "https:\/\/tr3.cbsistatic.com\/hub\/i\/2017\/04\/20\/0756eed6-a49e-46c5-b1b0-71fa85a3f202\/234a7250d7fa75d7c118ad84f3b8cf5a\/sechero.jpg",
+			"type": "image\/jpeg",
+			"length": 158055
+		},
+		"categories": ["Security"]
+	}, {
+    "id": 10,
+		"title": "Think that domain you're visiting is legitimate? Think again: Homograph attacks fake secure domains",
+		"pubDate": "2017-04-20 16:41:00",
+		"link": "http:\/\/www.techrepublic.com\/article\/think-that-domain-youre-visiting-is-legitimate-think-again-homograph-attacks-fake-secure-domains\/#ftag=RSS56d97e7",
+		"guid": "http:\/\/www.techrepublic.com\/article\/think-that-domain-youre-visiting-is-legitimate-think-again-homograph-attacks-fake-secure-domains\/#ftag=RSS56d97e7",
+		"author": "Brandon Vigliarolo",
+		"thumbnail": "",
+		"description": "This devious Unicode-based attack can falsify a domain name, all the way down to secure HTTPS. It isn't just the average user at risk-even seasoned IT pros can fall prey.",
+		"content": "This devious Unicode-based attack can falsify a domain name, all the way down to secure HTTPS. It isn't just the average user at risk-even seasoned IT pros can fall prey.",
+		"enclosure": {
+			"link": "https:\/\/tr1.cbsistatic.com\/hub\/i\/2017\/04\/20\/3aea6538-04a5-44b6-9f59-c710cd3fa30c\/82b46bb16728329d425e471d8c1b0da8\/phishing-address.jpg",
+			"type": "image\/jpeg",
+			"length": 735377
+		},
+		"categories": ["Security"]
+	}, {
+    "id": 11,
+		"title": "Is data scientist the most rewarding tech job? New report says yes",
+		"pubDate": "2017-04-20 16:40:20",
+		"link": "http:\/\/www.techrepublic.com\/article\/is-data-scientist-the-most-rewarding-tech-job-new-report-says-yes\/#ftag=RSS56d97e7",
+		"guid": "http:\/\/www.techrepublic.com\/article\/is-data-scientist-the-most-rewarding-tech-job-new-report-says-yes\/#ftag=RSS56d97e7",
+		"author": "Alison DeNisco",
+		"thumbnail": "",
+		"description": "Some 88% of data scientists say they are happy with their jobs, according to a CrowdFlower report. Here's what you need to know about the profession.",
+		"content": "Some 88% of data scientists say they are happy with their jobs, according to a CrowdFlower report. Here's what you need to know about the profession.",
+		"enclosure": {
+			"link": "https:\/\/tr1.cbsistatic.com\/hub\/i\/2017\/04\/20\/e77cbcf7-4efe-4661-8339-2c605bef0d00\/723c2e50f8cdc8a5a59f6399dc862ee8\/istock-611766064.jpg",
+			"type": "image\/jpeg",
+			"length": 31439
+		},
+		"categories": ["Big Data"]
+	}, {
+    "id": 12,
+		"title": "Top 5: Most in-demand IT jobs in 2017",
+		"pubDate": "2017-04-20 16:29:00",
+		"link": "http:\/\/www.techrepublic.com\/article\/top-5-most-in-demand-it-jobs-in-2017\/#ftag=RSS56d97e7",
+		"guid": "http:\/\/www.techrepublic.com\/article\/top-5-most-in-demand-it-jobs-in-2017\/#ftag=RSS56d97e7",
+		"author": "Tom Merritt",
+		"thumbnail": "",
+		"description": "If you're new to the industry, or looking to improve your skills, here are five IT jobs that are sure to be in high demand this year.",
+		"content": "If you're new to the industry, or looking to improve your skills, here are five IT jobs that are sure to be in high demand this year.",
+		"enclosure": {
+			"link": "https:\/\/tr2.cbsistatic.com\/hub\/i\/2017\/04\/20\/a465a5ce-0354-4390-944b-2aa87ae56cc1\/f1f24c05a311793a2bb2a2f1a75be308\/04-20-17top5itjobstommerritt.jpg",
+			"type": "image\/jpeg",
+			"length": 131765
+		},
+		"categories": ["CXO"]
+	}, {
+    "id": 13,
+		"title": "Oracle hopes to win the cloud by going cheap on data centers. Good luck with that",
+		"pubDate": "2017-04-20 15:34:18",
+		"link": "http:\/\/www.techrepublic.com\/article\/oracle-hopes-to-win-the-cloud-by-going-cheap-on-data-centers-good-luck-with-that\/#ftag=RSS56d97e7",
+		"guid": "http:\/\/www.techrepublic.com\/article\/oracle-hopes-to-win-the-cloud-by-going-cheap-on-data-centers-good-luck-with-that\/#ftag=RSS56d97e7",
+		"author": "Matt Asay",
+		"thumbnail": "",
+		"description": "Oracle wants you to believe that its cloud is faster, cheaper, and so much better than AWS, Microsoft Azure, and Google...despite spending a pittance on data centers.",
+		"content": "Oracle wants you to believe that its cloud is faster, cheaper, and so much better than AWS, Microsoft Azure, and Google...despite spending a pittance on data centers.",
+		"enclosure": {
+			"link": "https:\/\/tr3.cbsistatic.com\/hub\/i\/2017\/04\/20\/36e71fb1-379b-46c4-8e42-1b4f936ffe0b\/630f64e760e3aa0cf6c5385734f94d67\/cloudsavings.jpg",
+			"type": "image\/jpeg",
+			"length": 92175
+		},
+		"categories": ["Cloud"]
+	}, {
+    "id": 14,
+		"title": "Facebook's Automated Insights wants to give you an AI-powered team of virtual data scientists",
+		"pubDate": "2017-04-20 15:00:00",
+		"link": "http:\/\/www.techrepublic.com\/article\/facebooks-automated-insights-wants-to-give-you-an-ai-powered-team-of-virtual-data-scientists\/#ftag=RSS56d97e7",
+		"guid": "http:\/\/www.techrepublic.com\/article\/facebooks-automated-insights-wants-to-give-you-an-ai-powered-team-of-virtual-data-scientists\/#ftag=RSS56d97e7",
+		"author": "Jason Hiner",
+		"thumbnail": "",
+		"description": "Facebook launched Automated Insights at F8 2017 as an ambitious new machine learning service that can alert businesses to anomalies in behavior and trends and provide omnichannel data to act on.",
+		"content": "Facebook launched Automated Insights at F8 2017 as an ambitious new machine learning service that can alert businesses to anomalies in behavior and trends and provide omnichannel data to act on.",
+		"enclosure": {
+			"link": "https:\/\/tr4.cbsistatic.com\/hub\/i\/2017\/04\/20\/5f3c118c-1343-4de1-83d1-4ffeff205c12\/61fc6be91b504a407943085479a8774c\/fb-auto-insights.jpg",
+			"type": "image\/jpeg",
+			"length": 89999
+		},
+		"categories": ["Big Data"]
+	}, {
+    "id": 15,
+		"title": "Amazon Lex, managed AI services behind Alexa, now open to all AWS customers",
+		"pubDate": "2017-04-20 13:46:00",
+		"link": "http:\/\/www.techrepublic.com\/article\/amazon-lex-managed-ai-services-behind-alexa-now-open-to-all-aws-customers\/#ftag=RSS56d97e7",
+		"guid": "http:\/\/www.techrepublic.com\/article\/amazon-lex-managed-ai-services-behind-alexa-now-open-to-all-aws-customers\/#ftag=RSS56d97e7",
+		"author": "Alison DeNisco",
+		"thumbnail": "",
+		"description": "On Wednesday, Amazon Web Services announced that it was opening up its AI system Amazon Lex to all customers. Here's what you need to know.",
+		"content": "On Wednesday, Amazon Web Services announced that it was opening up its AI system Amazon Lex to all customers. Here's what you need to know.",
+		"enclosure": {
+			"link": "https:\/\/tr2.cbsistatic.com\/hub\/i\/2017\/04\/20\/4cf2e4b2-1ecb-44d8-be32-25870c04d645\/88ef63a05de8f9fb5c911f16b06a176c\/istock-664735184.jpg",
+			"type": "image\/jpeg",
+			"length": 35692
+		},
+		"categories": ["Developer"]
+	}],
+	"comments": [{
+		"id": 1,
+		"body": "some comment",
+		"postId": 1
+	}],
+	"profile": {
+		"name": "typicode"
+	}
+}

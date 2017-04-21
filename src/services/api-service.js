@@ -1,29 +1,48 @@
 import axios from 'axios'
 
+const api = axios.create({
+	baseURL: 'http://localhost:3000'
+})
+
 export default class ApiService {
-	fetchData(url, options) {
-		return new Promise((resolve, reject) => {
-			axios.get(url).then((response) => { 
-				resolve(response.data)
-			})
-		})
+	constructor() {
+		this.pageSize = 5
 	}
 
-	getNewsItems(from, max) {
-		return new Promise((resolve, reject) => {
-			this.fetchData('/static/data/items.json').then((data) => {
-				var to = max ? from + max : data.totalItems;
+	getArticles() {
+		return api.get('/articles')
+	}
 
-				resolve({ newsItems: data.items.slice(from, to), totalItems: data.totalItems })
-			})
+	getArticlesByPage(page) {
+		page = page || `/articles?_page=1&_limit=${this.pageSize}`;
+
+		return api.get(page)
+	}
+
+	getArticleItem(id) {
+		return api.get(`/articles/${id}`);
+	}
+
+
+	parseLinkHeader(header) {
+		if (header.length == 0) {
+			throw new Error("input must not be of zero length");
+		}
+
+		// Split parts by comma
+		var parts = header.split(',');
+		var links = {};
+		// Parse each part into a named link
+		parts.forEach(p => {
+			var section = p.split(';');
+			if (section.length != 2) {
+				throw new Error("section could not be split on ';'");
+			}
+			var url = section[0].replace(/<(.*)>/, '$1').trim();
+			var name = section[1].replace(/rel="(.*)"/, '$1').trim();
+			links[name] = url;
 		});
-	}
 
-	getNewsItem(url) {
-		return new Promise((resolve, reject) => {
-			this.getNewsItems().then(({newsItems}) => {
-				resolve(newsItems.find((i) => i.url === url))
-			})
-		})
+		return links;
 	}
 }

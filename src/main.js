@@ -15,7 +15,7 @@ const routes = [{
 		component: newsList
 	},
 	{
-		path: '/article/:url',
+		path: '/article/:id',
 		component: newsArticle,
 		props: true
 	}

@@ -3,7 +3,7 @@
         <router-link to="/">&larr; Back to home</router-link>
         <article class="article">
             <figure class="article-figure">
-                <img class="article-img" v-bind:src="article.image" alt="" width="200" />
+                <img class="article-img" v-bind:src="article.enclosure.link" alt="" width="200" />
             </figure>
             <h1 class="h1 article-heading">{{article.title}}</h1>
             <p class="article-paragraph">{{article.description}}</p>
@@ -18,17 +18,19 @@
 
     export default {
         name: 'newsArticle',
-        props: ['url'],
+        props: ['id'],
         data() {
             return {
-                article: {}
+                article: {
+                    enclosure: {}
+                }
             }
         },
         created() { this.getArticle() },
         methods: {
             getArticle() {
-                apiService.getNewsItem(this.url).then((item) => {
-                    this.article = item;
+                apiService.getArticleItem(this.id).then(({data}) => {
+                    this.article = data;
                 })
             }
         }

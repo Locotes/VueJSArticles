@@ -2,20 +2,22 @@
     <div class="container">
         <div class="news-items">
             <transition-group name="fade-in" tag="div">
-                <news-item v-for="newsItem in newsItems" v-bind:key="newsItem.url" v-bind:item="newsItem"></news-item>
+                <news-item v-for="newsItem in newsItems" v-bind:key="newsItem.id" v-bind:item="newsItem"></news-item>
             </transition-group>
             
             <div class="text-center">
                 <br />
-                <button class="btn btn-lg btn-primary" v-on:click="loadMoreItems()" v-show="moreItemsToLoad()">Load more</button>
+                <button class="btn btn-lg btn-primary" v-on:click="loadMoreItems()" v-show="loadMoreLink">Load more</button>
             </div>
         </div>
     </div>
 </template>
 
 <script>
+    import ApiService from 'Services/api-service';
     import newsItem from './item';
-    const itemsToLoad = 5;
+
+    const apiService = new ApiService();
 
     export default {
         name: 'newsList',
@@ -24,28 +26,21 @@
         },
         data: () => {
             return {
-                totalShownItems: 0                
+                newsItems: [],
+                loadMoreLink: null
             }
         },
         created() { 
-            this.$store.dispatch('addNewsItems', { from: 0, max: itemsToLoad }) 
-        },
-        computed: {
-            newsItems() {
-                this.totalShownItems = this.$store.state.newsItems.length;
-
-                return this.$store.state.newsItems;
-            },
-            totalItems() {
-                return this.$store.state.totalItems;
-            }
+            this.loadMoreItems();
         },
         methods: {
-            loadMoreItems() {
-                this.$store.dispatch('addNewsItems', { from: this.totalShownItems, max: itemsToLoad }) 
-            },
-            moreItemsToLoad() {
-                return this.totalShownItems < this.totalItems;
+            loadMoreItems() { 
+                apiService.getArticlesByPage(this.loadMoreLink).then(({data, headers}) => {
+                    let link = apiService.parseLinkHeader(headers.link);
+
+                    this.newsItems = this.newsItems.concat(data);
+                    this.loadMoreLink = link.next || null;
+                });
             }
         }
     }
