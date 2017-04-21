@@ -1,6 +1,21 @@
 <template>
     <div class="container">
         <div class="news-items">
+            <div class="filter-row">
+                <div class="form-inline">
+                    <div class="form-group">
+                        <label>Sort by</label>
+                        <select class="form-control">
+                            <option value="date-desc">Date (desc)</option>
+                            <option value="date-asc">Date (asc)</option>
+                            <option value="title-desc">Title (desc)</option>
+                            <option value="title-asc">Title (asc)</option>
+                        </select>
+                    </div>
+                </div>
+                
+            </div>
+
             <news-item v-for="newsItem in newsItems" v-bind:key="newsItem.id" v-bind:item="newsItem"></news-item>
             
             <div class="text-center">
