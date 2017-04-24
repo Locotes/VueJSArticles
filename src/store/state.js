@@ -1,4 +1,5 @@
 export const state = {
-    newsItems: [],
-    totalItems: 0
+    sorting: '',
+    currentPage: 1,
+    searchQuery: ''
 }

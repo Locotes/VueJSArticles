@@ -24,6 +24,10 @@
             </div>
 
             <news-item v-for="newsItem in newsItems" v-bind:key="newsItem.id" v-bind:item="newsItem"></news-item>
+
+            <div class="well" v-if="!newsItems.length">
+                <p><strong>Unforunately peanutbutter</strong><br>No results found!</p>
+            </div>
             
             <div class="text-center">
                 <br />
@@ -77,8 +81,11 @@
                 },
                 showCategoriesModal: false,
                 requestUrl: {
-                    base: '',
-                    query: {}
+                    base: apiService.getArticlesBaseUrl(),
+                    query: {
+                        _page: 1,
+                        _limit: 5
+                    }
                 },
                 page: {
                     prev: null,
@@ -91,17 +98,35 @@
             }
         },
         created() { 
+            this.restoreState();
             this.loadMoreItems();
             this.setAvailableCategories();
         },
         methods: {
+            restoreState() {
+                // Restore search query
+                if (this.$store.state.searchQuery){
+                    this.searchQuery = this.$store.state.searchQuery;
+                    this.changeSearchQuery();
+                }
+
+                // Restore currentPage
+                if (this.$store.state.currentPage) {
+                    this.getPage(this.$store.state.currentPage);
+                }
+
+                // // Restore sorting
+                if (this.$store.state.sorting) {
+                    this.sorting = this.$store.state.sorting;
+                    this.changeSorting();
+                }
+            },
             loadMoreItems() {
                 // If first request, use the default request url
                 let queryString = apiService.objectToQueryString(this.requestUrl.query);
-                let requestUrl = this.requestUrl.base ? `${this.requestUrl.base}?${queryString}` : null
+                let requestUrl =  `${this.requestUrl.base}?${queryString}`;
 
-                apiService.getArticlesByPage(requestUrl).then(({data, headers, config}) => {
-                    this.requestUrl.base = config.url.split('?')[0];
+                apiService.getArticles(requestUrl).then(({data, headers, config}) => {
                     this.requestUrl.query = apiService.queryStringToObject(config.url.split('?')[1]);
 
                     this.newsItems = data;
@@ -121,6 +146,7 @@
                 this.requestUrl.query._page = number;
 
                 this.loadMoreItems();
+                this.$store.commit('setCurrentPage', number);
             },
             getPageNumber(link) {
                 return Number(link.match(/page=\d+/g)[0].replace('page=', ''))
@@ -130,10 +156,12 @@
                 this.requestUrl.query._order = this.sorting.split('-')[1];
 
                 this.loadMoreItems();
+                this.$store.commit('setSorting', this.sorting);
             },
             changeSearchQuery: debounce(function() {
                 if (this.searchQuery !== '') {
                     this.requestUrl.query.q = this.searchQuery;
+                    this.requestUrl.query._page = 1; // Otherwise if _page=3, it will also show the 3rd resultpage
 
                     this.loadMoreItems();
                 } else {
@@ -142,6 +170,8 @@
                         this.loadMoreItems();
                     }
                 }
+
+                this.$store.commit('setSearchQuery', this.searchQuery);
             }, 200),
             setAvailableCategories() {
                 apiService.getCategories().then(({data}) => {
@@ -160,5 +190,13 @@
     padding: 10px 0;
 }
 
+.filter-row {
+    margin-bottom: 15px;
+}
+
 .pagination span {cursor:pointer;}
+
+.well > p {
+    margin-bottom: 0;
+}
 </style>

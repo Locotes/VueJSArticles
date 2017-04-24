@@ -6,13 +6,14 @@ const api = axios.create({
 
 export default class ApiService {
 	constructor() {
-		this.pageSize = 5
 	}
 
-	getArticlesByPage(page) {
-		page = page || `/articles?_page=1&_limit=${this.pageSize}`;
+	getArticlesBaseUrl() {
+		return `${api.defaults.baseURL}/articles`;
+	}
 
-		return api.get(page)
+	getArticles(url) {
+		return api.get(url)
 	}
 
 	getArticleItem(id) {
@@ -24,7 +25,7 @@ export default class ApiService {
 	}
 
 	parseLinkHeader(header) {
-		if (header.length == 0) 
+		if (!header || header.length == 0) 
 			return null
 		
 		// Split parts by comma

@@ -12,6 +12,6 @@ export default new Vuex.Store({
     state,
     mutations,
     actions,
-    getters
-   /* plugins: [createPersistedState({ storage: window.sessionStorage })]*/
+    getters,
+    plugins: [createPersistedState({ storage: window.sessionStorage })]
 })

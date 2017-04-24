@@ -1,8 +1,11 @@
 export const mutations = {
-	addNewsItems(state, newsItems) {
-		state.newsItems = state.newsItems.concat(newsItems);
+	setSearchQuery(state, query) {
+		state.searchQuery = query;
 	},
-    setTotalItems(state, totalItems) {
-        state.totalItems = totalItems;
+    setSorting(state, sorting) {
+        state.sorting = sorting;
+    },
+    setCurrentPage(state, page) {
+        state.currentPage = page;
     }
 }
