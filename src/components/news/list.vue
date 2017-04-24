@@ -12,6 +12,10 @@
                             <option value="title-ASC">Title (asc)</option>
                         </select>
                     </div>
+                    <div class="form-group">
+                        <label>Search</label>
+                        <input type="text" class="form-control" placeholder="Search query..." v-model="searchQuery" v-on:input="changeSearchQuery()" />
+                    </div>
                 </div>
             </div>
 
@@ -58,14 +62,13 @@
                     query: {}
                 },
                 page: {
-                    list: [],
                     prev: null,
                     next: null,
                     total: 1,
-                    current: 1,
-                    urlTemplate: ''
+                    current: 1
                 },
-                sorting: 'pubDate-DESC'
+                sorting: 'pubDate-DESC',
+                searchQuery: ''
             }
         },
         created() { 
@@ -73,6 +76,7 @@
         },
         methods: {
             loadMoreItems() {
+                // If first request, use the default request url
                 let queryString = apiService.objectToQueryString(this.requestUrl.query);
                 let requestUrl = this.requestUrl.base ? `${this.requestUrl.base}?${queryString}` : null
 
@@ -80,18 +84,17 @@
                     this.requestUrl.base = config.url.split('?')[0];
                     this.requestUrl.query = apiService.queryStringToObject(config.url.split('?')[1]);
 
-                    let link = apiService.parseLinkHeader(headers.link);
-
-                    //this.page.urlTemplate = link.first.replace(/page=\d+/g, 'page={0}');
                     this.newsItems = data;
 
-                    this.generatePagination(link);
+                    this.generatePagination(headers.link);
                 });
             },
-            generatePagination(link) {
-                this.page.total =  this.getPageNumber(link.last);
-                this.page.prev = link.prev ? this.getPageNumber(link.prev) : null;
-                this.page.next = link.next ? this.getPageNumber(link.next) : null;  
+            generatePagination(headersLink) {
+                let link = apiService.parseLinkHeader(headersLink);
+
+                this.page.total = link ? this.getPageNumber(link.last) : 1;
+                this.page.prev = link && link.prev ? this.getPageNumber(link.prev) : null;
+                this.page.next = link && link.next ? this.getPageNumber(link.next) : null;  
             },
             getPage(number) {
                 this.page.current = number;
@@ -107,6 +110,18 @@
                 this.requestUrl.query._order = this.sorting.split('-')[1];
 
                 this.loadMoreItems();
+            },
+            changeSearchQuery() {
+                if (this.searchQuery !== '') {
+                    this.requestUrl.query.q = this.searchQuery;
+
+                    this.loadMoreItems();
+                } else {
+                    if (this.requestUrl.query.q) {
+                        delete this.requestUrl.query.q;
+                        this.loadMoreItems();
+                    }
+                }
             }
         }
     }

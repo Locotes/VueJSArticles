@@ -25,10 +25,9 @@ export default class ApiService {
 
 
 	parseLinkHeader(header) {
-		if (header.length == 0) {
-			throw new Error("input must not be of zero length");
-		}
-
+		if (header.length == 0) 
+			return null
+		
 		// Split parts by comma
 		let parts = header.split(',');
 		let links = {};
