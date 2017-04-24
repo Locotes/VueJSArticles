@@ -46,6 +46,7 @@
 <script>
     import ApiService from 'Services/api-service';
     import newsItem from './item';
+    import debounce from 'lodash/debounce';
 
     const apiService = new ApiService();
 
@@ -111,7 +112,7 @@
 
                 this.loadMoreItems();
             },
-            changeSearchQuery() {
+            changeSearchQuery: debounce(function() {
                 if (this.searchQuery !== '') {
                     this.requestUrl.query.q = this.searchQuery;
 
@@ -122,7 +123,7 @@
                         this.loadMoreItems();
                     }
                 }
-            }
+            }, 200)
         }
     }
 </script>
