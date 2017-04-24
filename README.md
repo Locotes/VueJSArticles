@@ -30,4 +30,4 @@ In order to run this yourself:
 * ~~Make list sortable by date~~
 * ~~Save sorting in Vuex~~
 * ~~Make list searchable~~
-* Searchability using querystring
+* ~~Searchability using querystring~~
