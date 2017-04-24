@@ -9,6 +9,8 @@ In order to run this yourself:
 3. npm run dev
 
 ## Update
+- (2017-04-24) Make list sortable by date
+- (2017-04-24) Use pagination instead of read more
 - (2017-04-21) Implement json-server
 - (2017-04-19) Implement Vuex
 - (2017-04-19) Converted the project using `vue-cli` in order to use HMR (Hot Module Replacement)
@@ -17,11 +19,11 @@ In order to run this yourself:
 * ~~Take a look at vue-cli to start the project with~~
 * ~~Implement Vuex~~
 * ~~Implement json-server~~
-* Use pagination instead of read more
+* ~~Use pagination instead of read more~~
 * Save pagination state in Vuex
 * Add filters for categories
 * Save filter in Vuex
-* Make list sortable by date 
+* ~~Make list sortable by date~~
 * Save sorting in Vuex
 * Make list searchable
 * Searchability using querystring
