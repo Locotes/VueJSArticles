@@ -4,6 +4,10 @@
             <div class="filter-row">
                 <div class="form-inline">
                     <div class="form-group">
+                        <label>Categories</label>
+                        <button class="btn btn-default" v-on:click="showCategoriesModal = true">Pick</button>
+                    </div>
+                    <div class="form-group">
                         <label>Sort by</label>
                         <select class="form-control" v-model="sorting" v-on:change="changeSorting()">
                             <option value="pubDate-DESC">Date (desc)</option>
@@ -40,12 +44,20 @@
                 </nav>
             </div>
         </div>
+
+        <category-modal 
+            v-if="showCategoriesModal" 
+            v-on:close="showCategoriesModal = false"
+            v-on:update="updateCategories($event)"
+            v-bind:categories="categories"
+        ></category-modal>
     </div>
 </template>
 
 <script>
     import ApiService from 'Services/api-service';
     import newsItem from './item';
+    import categoryModal from '../modal/category-modal';
     import debounce from 'lodash/debounce';
 
     const apiService = new ApiService();
@@ -53,11 +65,17 @@
     export default {
         name: 'newsList',
         components: {
-            'newsItem': newsItem
+            newsItem: newsItem,
+            categoryModal: categoryModal
         },
         data: () => {
             return {
                 newsItems: [],
+                categories: {
+                    available: [],
+                    selected: []
+                },
+                showCategoriesModal: false,
                 requestUrl: {
                     base: '',
                     query: {}
@@ -74,6 +92,7 @@
         },
         created() { 
             this.loadMoreItems();
+            this.setAvailableCategories();
         },
         methods: {
             loadMoreItems() {
@@ -123,7 +142,15 @@
                         this.loadMoreItems();
                     }
                 }
-            }, 200)
+            }, 200),
+            setAvailableCategories() {
+                apiService.getCategories().then(({data}) => {
+                    this.categories.available = data;
+                })
+            },
+            updateCategories(categories) {
+                console.log('Ever to be implemented');
+            }
         }
     }
 </script>

@@ -9,10 +9,6 @@ export default class ApiService {
 		this.pageSize = 5
 	}
 
-	getArticles() {
-		return api.get('/articles')
-	}
-
 	getArticlesByPage(page) {
 		page = page || `/articles?_page=1&_limit=${this.pageSize}`;
 
@@ -23,6 +19,9 @@ export default class ApiService {
 		return api.get(`/articles/${id}`);
 	}
 
+	getCategories() {
+		return api.get('/categories');
+	}
 
 	parseLinkHeader(header) {
 		if (header.length == 0) 

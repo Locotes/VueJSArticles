@@ -240,11 +240,7 @@
 		},
 		"categories": ["Developer"]
 	}],
-	"comments": [{
-		"id": 1,
-		"body": "some comment",
-		"postId": 1
-	}],
+	"categories": ["Developer", "Big Data", "Cloud", "CXO", "Security", "Networking", "Software", "Mobility", "Enterprise Software", "Innovation"],
 	"profile": {
 		"name": "typicode"
 	}
