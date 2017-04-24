@@ -30,19 +30,44 @@ export default class ApiService {
 		}
 
 		// Split parts by comma
-		var parts = header.split(',');
-		var links = {};
+		let parts = header.split(',');
+		let links = {};
 		// Parse each part into a named link
 		parts.forEach(p => {
-			var section = p.split(';');
+			let section = p.split(';');
 			if (section.length != 2) {
 				throw new Error("section could not be split on ';'");
 			}
-			var url = section[0].replace(/<(.*)>/, '$1').trim();
-			var name = section[1].replace(/rel="(.*)"/, '$1').trim();
+			let url = section[0].replace(/<(.*)>/, '$1').trim();
+			let name = section[1].replace(/rel="(.*)"/, '$1').trim();
 			links[name] = url;
 		});
 
 		return links;
+	}
+
+	queryStringToObject(str) {
+		let items = str.split('&');
+		let returnObj = {};
+
+		for (let i = 0; i < items.length; i++) {
+			let item = items[i].split('=');
+			returnObj[item[0]] = item[1];
+		}
+
+		return returnObj;
+	}
+
+	objectToQueryString(obj) {
+		let returnStr = '';
+
+		for (let key in obj) {
+			if (returnStr !== '') {
+				returnStr += '&';
+			}
+			returnStr += key + '=' + encodeURIComponent(obj[key]);
+		}
+
+		return returnStr;
 	}
 }

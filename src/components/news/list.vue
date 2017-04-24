@@ -5,15 +5,14 @@
                 <div class="form-inline">
                     <div class="form-group">
                         <label>Sort by</label>
-                        <select class="form-control">
-                            <option value="date-desc">Date (desc)</option>
-                            <option value="date-asc">Date (asc)</option>
-                            <option value="title-desc">Title (desc)</option>
-                            <option value="title-asc">Title (asc)</option>
+                        <select class="form-control" v-model="sorting" v-on:change="changeSorting()">
+                            <option value="pubDate-DESC">Date (desc)</option>
+                            <option value="pubDate-ASC">Date (asc)</option>
+                            <option value="title-DESC">Title (desc)</option>
+                            <option value="title-ASC">Title (asc)</option>
                         </select>
                     </div>
                 </div>
-                
             </div>
 
             <news-item v-for="newsItem in newsItems" v-bind:key="newsItem.id" v-bind:item="newsItem"></news-item>
@@ -27,9 +26,9 @@
                                 <span aria-hidden="true">&laquo;</span>
                             </span>
                         </li>
-                        <li v-bind:class="{active: page.current === thisPage.number}" v-for="thisPage in page.list"><span v-on:click="getPage(thisPage)">{{thisPage.number}}</span></li>
+                        <li v-bind:class="{active: page.current === n}" v-for="n in page.total"><span v-on:click="getPage(n)">{{n}}</span></li>
                         <li v-show="page.next">
-                            <span  v-on:click="getPage(page.next)" aria-label="Next">
+                            <span v-on:click="getPage(page.next)" aria-label="Next">
                                 <span aria-hidden="true">&raquo;</span>
                             </span>
                         </li>
@@ -54,6 +53,10 @@
         data: () => {
             return {
                 newsItems: [],
+                requestUrl: {
+                    base: '',
+                    query: {}
+                },
                 page: {
                     list: [],
                     prev: null,
@@ -61,18 +64,25 @@
                     total: 1,
                     current: 1,
                     urlTemplate: ''
-                }
+                },
+                sorting: 'pubDate-DESC'
             }
         },
         created() { 
             this.loadMoreItems();
         },
         methods: {
-            loadMoreItems(url) { 
-                apiService.getArticlesByPage(url).then(({data, headers}) => {
+            loadMoreItems() {
+                let queryString = apiService.objectToQueryString(this.requestUrl.query);
+                let requestUrl = this.requestUrl.base ? `${this.requestUrl.base}?${queryString}` : null
+
+                apiService.getArticlesByPage(requestUrl).then(({data, headers, config}) => {
+                    this.requestUrl.base = config.url.split('?')[0];
+                    this.requestUrl.query = apiService.queryStringToObject(config.url.split('?')[1]);
+
                     let link = apiService.parseLinkHeader(headers.link);
 
-                    this.page.urlTemplate = link.first.replace(/page=\d+/g, 'page={0}');
+                    //this.page.urlTemplate = link.first.replace(/page=\d+/g, 'page={0}');
                     this.newsItems = data;
 
                     this.generatePagination(link);
@@ -80,30 +90,23 @@
             },
             generatePagination(link) {
                 this.page.total =  this.getPageNumber(link.last);
-                this.page.prev = link.prev ? { 
-                    number: this.getPageNumber(link.prev),
-                    url: link.prev
-                 } : null;
-                this.page.next = link.next ? { 
-                    number: this.getPageNumber(link.next),
-                    url: link.next
-                 } : null;  
-
-                if (!this.page.list.length){ 
-                    for (let i = 1; i <= this.page.total; i++) {
-                        this.page.list.push({
-                            number: i,
-                            url: this.page.urlTemplate.replace('{0}', i)
-                        });
-                    }
-                }
+                this.page.prev = link.prev ? this.getPageNumber(link.prev) : null;
+                this.page.next = link.next ? this.getPageNumber(link.next) : null;  
             },
-            getPage(page) {
-                this.loadMoreItems(page.url);
-                this.page.current = page.number;
+            getPage(number) {
+                this.page.current = number;
+                this.requestUrl.query._page = number;
+
+                this.loadMoreItems();
             },
             getPageNumber(link) {
                 return Number(link.match(/page=\d+/g)[0].replace('page=', ''))
+            },
+            changeSorting() {
+                this.requestUrl.query._sort = this.sorting.split('-')[0];
+                this.requestUrl.query._order = this.sorting.split('-')[1];
+
+                this.loadMoreItems();
             }
         }
     }
