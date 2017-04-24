@@ -9,6 +9,7 @@ In order to run this yourself:
 3. `npm run dev`
 
 ## Update
+- (2017-04-24) Add filters for categories (They won't work, because they can't work together with json-server...)
 - (2017-04-24) Make list searchable
 - (2017-04-24) Make list sortable by date
 - (2017-04-24) Use pagination instead of read more
@@ -22,8 +23,8 @@ In order to run this yourself:
 * ~~Implement json-server~~
 * ~~Use pagination instead of read more~~
 * Save pagination state in Vuex
-* Add filters for categories
-* Save filter in Vuex
+* ~~Add filters for categories~~
+* ~~Save filter in Vuex~~
 * ~~Make list sortable by date~~
 * Save sorting in Vuex
 * ~~Make list searchable~~
